@@ -1,0 +1,82 @@
+Variable,Description,Variable_Segment
+ListingKey,"Unique key for each listing, same value as the 'key' used in the listing object in the API.",Unique_ids
+ListingNumber,The number that uniquely identifies the listing to the public as displayed on the website.,Unique_ids
+ListingCreationDate,The date the listing was created.,Gen_Info
+CreditGrade,The Credit rating that was assigned at the time the listing went live. Applicable for listings pre-2009 period and will only be populated for those listings.,Loan_Info
+Term,The length of the loan expressed in months.,Loan_Info
+LoanStatus,"The current status of the loan: Cancelled,  Chargedoff, Completed, Current, Defaulted, FinalPaymentInProgress, PastDue. The PastDue status will be accompanied by a delinquency bucket.",Loan_Info
+ClosedDate,"Closed date is applicable for Cancelled, Completed, Chargedoff and Defaulted loan statuses. ",Loan_Info
+BorrowerAPR,The Borrower's Annual Percentage Rate (APR) for the loan.,Loan_Info
+BorrowerRate,The Borrower's interest rate for this loan. ,Loan_Info
+LenderYield,The Lender yield on the loan. Lender yield is equal to the interest rate on the loan less the servicing fee.,Loan_Info
+EstimatedEffectiveYield,"Effective yield is equal to the borrower interest rate (i) minus the servicing fee rate, (ii) minus estimated uncollected interest on charge-offs, (iii) plus estimated collected late fees.  Applicable for loans originated after July 2009.",Credit_Metrics
+EstimatedLoss,Estimated loss is the estimated principal loss on charge-offs. Applicable for loans originated after July 2009.,Credit_Metrics
+EstimatedReturn,The estimated return assigned to the listing at the time it was created. Estimated return is the difference between the Estimated Effective Yield and the Estimated Loss Rate. Applicable for loans originated after July 2009.,Credit_Metrics
+ProsperRating (numeric),"The  Prosper Rating assigned at the time the listing was created: 0 - N/A, 1 - HR, 2 - E, 3 - D, 4 - C, 5 - B, 6 - A, 7 - AA.  Applicable for loans originated after July 2009.",Credit_Metrics
+ProsperRating (Alpha),The Prosper Rating assigned at the time the listing was created between AA - HR.  Applicable for loans originated after July 2009.,Credit_Metrics
+ProsperScore,"A custom risk score built using historical Prosper data. The score ranges from 1-10, with 10 being the best, or lowest risk score.  Applicable for loans originated after July 2009.",Credit_Metrics
+ListingCategory,"The category of the listing that the borrower selected when posting their listing: 0 - Not Available, 1 - Debt Consolidation, 2 - Home Improvement, 3 - Business, 4 - Personal Loan, 5 - Student Use, 6 - Auto, 7- Other, 8 - Baby&Adoption, 9 - Boat, 10 - Cosmetic Procedure, 11 - Engagement Ring, 12 - Green Loans, 13 - Household Expenses, 14 - Large Purchases, 15 - Medical/Dental, 16 - Motorcycle, 17 - RV, 18 - Taxes, 19 - Vacation, 20 - Wedding Loans",Loan_Info
+BorrowerState,The two letter abbreviation of the state of the address of the borrower at the time the Listing was created.,Gen_Info
+Occupation,The Occupation selected by the Borrower at the time they created the listing.,Gen_Info
+EmploymentStatus,The employment status of the borrower at the time they posted the listing.,Gen_Info
+EmploymentStatusDuration,The length in months of the employment status at the time the listing was created.,Gen_Info
+IsBorrowerHomeowner,A Borrower will be classified as a homowner if they have a mortgage on their credit profile or provide documentation confirming they are a homeowner.,Gen_Info
+CurrentlyInGroup,Specifies whether or not the Borrower was in a group at the time the listing was created.,Gen_Info
+GroupKey,The Key of the group in which the Borrower is a member of. Value will be null if the borrower does not have a group affiliation.,Gen_Info
+DateCreditPulled,The date the credit profile was pulled. ,Gen_Info
+CreditScoreRangeLower,The lower value representing the range of the borrower's credit score as provided by a consumer credit rating agency.,Gen_Info
+CreditScoreRangeUpper,The upper value representing the range of the borrower's credit score as provided by a consumer credit rating agency. ,Gen_Info
+FirstRecordedCreditLine,The date the first credit line was opened.,Gen_Info
+CurrentCreditLines,Number of current credit lines at the time the credit profile was pulled.,Gen_Info
+OpenCreditLines,Number of open credit lines at the time the credit profile was pulled.,Gen_Info
+TotalCreditLinespast7years,Number of credit lines in the past seven years at the time the credit profile was pulled.,Gen_Info
+OpenRevolvingAccounts,Number of open revolving accounts at the time the credit profile was pulled.,Gen_Info
+OpenRevolvingMonthlyPayment,Monthly payment on revolving accounts at the time the credit profile was pulled.,Gen_Info
+InquiriesLast6Months,Number of inquiries in the past six months at the time the credit profile was pulled.,Gen_Info
+TotalInquiries,Total number of inquiries at the time the credit profile was pulled.,Gen_Info
+CurrentDelinquencies,Number of accounts delinquent at the time the credit profile was pulled.,Gen_Info
+AmountDelinquent,Dollars delinquent at the time the credit profile was pulled.,Gen_Info
+DelinquenciesLast7Years,Number of delinquencies in the past 7 years at the time the credit profile was pulled.,Gen_Info
+PublicRecordsLast10Years,Number of public records in the past 10 years at the time the credit profile was pulled.,Gen_Info
+PublicRecordsLast12Months,Number of public records in the past 12 months at the time the credit profile was pulled.,Gen_Info
+RevolvingCreditBalance,Dollars of revolving credit at the time the credit profile was pulled.,Gen_Info
+BankcardUtilization,The percentage of available revolving credit that is utilized at the time the credit profile was pulled.,Gen_Info
+AvailableBankcardCredit,The total available credit via bank card at the time the credit profile was pulled.,Gen_Info
+TotalTrades,Number of trade lines ever opened at the time the credit profile was pulled.,Gen_Info
+TradesNeverDelinquent,Number of trades that have never been delinquent at the time the credit profile was pulled.,Gen_Info
+TradesOpenedLast6Months,Number of trades opened in the last 6 months at the time the credit profile was pulled.,Gen_Info
+DebtToIncomeRatio,The debt to income ratio of the borrower at the time the credit profile was pulled. This value is Null if the debt to income ratio is not available. This value is capped at 10.01 (any debt to income ratio larger than 1000% will be returned as 1001%).,Gen_Info
+IncomeRange,The income range of the borrower at the time the listing was created.,Gen_Info
+IncomeVerifiable,The borrower indicated they have the required documentation to support their income.,Gen_Info
+StatedMonthlyIncome,The monthly income the borrower stated at the time the listing was created.,Gen_Info
+LoanKey,Unique key for each loan. This is the same key that is used in the API. ,Unique_ids
+TotalProsperLoans,Number of Prosper loans the borrower at the time they created this listing. This value will be null if the borrower had no prior loans. ,Gen_Info
+TotalProsperPaymentsBilled,Number of on time payments the borrower made on Prosper loans at the time they created this listing. This value will be null if the borrower had no prior loans.,Gen_Info
+OnTimeProsperPayments,Number of on time payments the borrower had made on Prosper loans at the time they created this listing. This value will be null if the borrower has no prior loans.,Gen_Info
+ProsperPaymentsLessThanOneMonthLate,Number of payments the borrower made on Prosper loans that were less than one month late at the time they created this listing. This value will be null if the borrower had no prior loans. ,Gen_Info
+ProsperPaymentsOneMonthPlusLate,Number of payments the borrower made on Prosper loans that were greater than one month late at the time they created this listing. This value will be null if the borrower had no prior loans.,Gen_Info
+ProsperPrincipalBorrowed,Total principal borrowed on Prosper loans at the time the listing was created. This value will be null if the borrower had no prior loans.,Gen_Info
+ProsperPrincipalOutstanding,Principal outstanding on Prosper loans at the time the listing was created. This value will be null if the borrower had no prior loans.,Gen_Info
+ScorexChangeAtTimeOfListing,Borrower's credit score change at the time the credit profile was pulled. This will be the change relative to the borrower's last Prosper loan. This value will be null if the borrower had no prior loans.,Gen_Info
+LoanCurrentDaysDelinquent,The number of days delinquent. ,Loan_Info
+LoanFirstDefaultedCycleNumber,The cycle the loan was charged off. If the loan has not charged off the value will be null. ,Loan_Info
+LoanMonthsSinceOrigination,Number of months since the loan originated.,Loan_Info
+LoanNumber,Unique numeric value associated with the loan.,Unique_ids
+LoanOriginalAmount,The origination amount of the loan.,Loan_Info
+LoanOriginationDate,The date the loan was originated.,Loan_Info
+LoanOriginationQuarter,The quarter in which the loan was originated.,Loan_Info
+MemberKey,The unique key that is associated with the borrower. This is the same identifier that is used in the API member object. ,Unique_ids
+MonthlyLoanPayment,The scheduled monthly loan payment.,Loan_Info
+LP_CustomerPayments,"Pre charge-off cumulative gross payments made by the borrower on the loan. If the loan has charged off, this value will exclude any recoveries.",Loan_Info
+LP_CustomerPrincipalPayments,"Pre charge-off cumulative principal payments made by the borrower on the loan. If the loan has charged off, this value will exclude any recoveries.",Loan_Info
+LP_InterestandFees,"Pre charge-off cumulative interest and fees paid by the borrower. If the loan has charged off, this value will exclude any recoveries.",Loan_Info
+LP_ServiceFees,Cumulative service fees paid by the investors who have invested in the loan. ,Loan_Info
+LP_CollectionFees,Cumulative collection fees paid by the investors who have invested in the loan.,Loan_Info
+LP_GrossPrincipalLoss,The gross charged off amount of the loan.,Loan_Info
+LP_NetPrincipalLoss,The principal that remains uncollected after any recoveries.,Loan_Info
+LP_NonPrincipalRecoverypayments,"The interest and fee component of any recovery payments. The current payment policy applies payments in the following order: Fees, interest, principal.",Loan_Info
+PercentFunded,Percent the listing was funded.,Loan_Info
+Recommendations,Number of recommendations the borrower had at the time the listing was created.,Gen_Info
+InvestmentFromFriendsCount,Number of friends that made an investment in the loan.,Loan_Info
+InvestmentFromFriendsAmount,Dollar amount of investments that were made by friends.,Loan_Info
+Investors,The number of investors that funded the loan.,Loan_Info
